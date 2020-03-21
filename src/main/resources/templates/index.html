@@ -2,6 +2,10 @@
 <html lang="en" xmlns:th ="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+
     <title>Web Shop</title>
 </head>
 <body>
@@ -14,19 +18,19 @@
         <th>Description</th>
     </tr>
 
-<tr th: each="Product: ${productList}">
-  <td th: text="${Product.id}"> 1 </td>
-    <td th: text="${Product.productName}">Cloths</td>
-    <td th: text="${Product.price}">200.99</td>
-    <td th: text="${ Product.description}">woollen</td>
+<tr th:each="Product: ${productList}">
+  <td th:text="${Product.id}"> 1 </td>
+    <td th:text="${Product.productName}">Cloths</td>
+    <td th:text="${Product.price}">200.99</td>
+    <td th:text="${ Product.description}">woollen</td>
 
 
-        <td><a th: href= " @{'/update/' + ${Product.id}}">Update</a></td>
-        <td ><a th: href= " @{'/delete/' + ${Product.id}}">delete</a></td>
+        <td><a th:href= " @{'/update/' + ${Product.id}}">Update</a></td>
+        <td ><a th:href= " @{'/delete/' + ${Product.id}}">delete</a></td>
     </tr>
 </table>
 
-       <th><a th: href="create" > add new product</a> </th>
+       <th><a th:href="create" > add new product</a> </th>
 
 </body>
 </html>

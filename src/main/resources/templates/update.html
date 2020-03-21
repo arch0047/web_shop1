@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en"  xmlns:th="http://www.thymeleaf.org">>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <title>Update</title>
 </head>
 <body>
-<h1>Update Product</h1>
+<h1> Update Product </h1>
 <form action="/update" method="post">
     <div>
         <input type="hidden" name="id" th:value = "${pdt.id}">
