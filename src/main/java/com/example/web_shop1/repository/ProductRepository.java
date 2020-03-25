@@ -30,6 +30,12 @@ public class ProductRepository implements ICrudRepository<Product> {
 
     }
 
+    //**************
+    public void saveProduct(Product product){
+        products.add(product);
+    }
+    //**********************
+
     @Override
     public List<Product> readAll()
     {
@@ -47,6 +53,7 @@ public class ProductRepository implements ICrudRepository<Product> {
         }
         return null;
     }
+
 
     @Override
     public boolean update(Product product) {

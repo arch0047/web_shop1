@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th ="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Create</title>
@@ -8,10 +8,11 @@
 <h1> Create Product</h1>
 
 <form action="/create" method="post">
-    <input type="text" name="Id" placeholder="id">
-    <input type="text" name="Name" placeholder="name">
-    <input type="text" name="Price" placeholder="price">
-    <input type="text" name="Description" placeholder="description">
+
+    <input type="text" name="id" placeholder="id">
+    <input type="text" name="productName" placeholder="name">
+    <input type="text" name="price" placeholder="price">
+    <input type="text" name="description" placeholder="description">
     <input type="submit" name="Save">
 
 </form>

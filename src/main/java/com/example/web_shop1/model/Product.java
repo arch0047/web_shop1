@@ -1,11 +1,28 @@
 package com.example.web_shop1.model;
 
-public class Product {
 
+import javax.persistence.*;
+import java.util.Set;
+
+
+@Entity
+// @Table(name="productInfo")
+public class Product {
+    // primary key
+    @Id
+    // let MySQL give the next ID (IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String productName;
     private double price;
     private String description;
+
+
+    @OneToOne(fetch = FetchType.EAGER)
+    private Company company;
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "product")
+    private Set<Category> categories;
 
 
     public Product(){
@@ -51,14 +68,4 @@ public class Product {
         this.description = description;
     }
 
-
-    @Override
-    public String toString() {
-        return "Product{" +
-                "id=" + id +
-                ", productName='" + productName + '\'' +
-                ", price=" + price +
-                ", description='" + description + '\'' +
-                '}';
-    }
 }

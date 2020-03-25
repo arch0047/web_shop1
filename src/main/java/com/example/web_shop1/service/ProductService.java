@@ -27,6 +27,12 @@ public class ProductService {
         productRepository.create(product);
     }
 
+    //********
+    public void saveProduct(Product product){
+        productRepository.saveProduct(product);
+
+    }
+    //***********
     public boolean update(Product product){
 
         boolean updateOK = productRepository.update(product);
